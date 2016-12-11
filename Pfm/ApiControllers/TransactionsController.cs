@@ -11,6 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Pfm.DAL;
 using Pfm.Models.Do;
+using Pfm.Models;
 
 namespace Pfm.ApiControllers
 {

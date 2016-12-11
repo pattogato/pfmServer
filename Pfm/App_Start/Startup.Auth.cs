@@ -61,9 +61,9 @@ namespace Pfm
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+                appId: "767879896699755",
+                appSecret: "2af2eecc3dcb17b1bcb3c78ce589b6c5");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

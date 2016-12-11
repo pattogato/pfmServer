@@ -14,6 +14,10 @@ namespace Pfm.Models.Do
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
+        public Guid LocalId { get; set; }
+
+        public string Name { get; set; }
+
         public DateTime Date { get; set; }
 
         public double Latitude { get; set; }
@@ -37,6 +41,8 @@ namespace Pfm.Models.Do
         [ForeignKey("UserId")]
         public virtual ApplicationUser User { get; set; }
 
-        public virtual ICollection<Tag> Tags { get; set; } 
+        public virtual ICollection<Tag> Tags { get; set; }
+
+        
     }
 }

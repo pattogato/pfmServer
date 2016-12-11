@@ -239,6 +239,10 @@
     <Compile Include="Migrations\201612051345116_Tags.Designer.cs">
       <DependentUpon>201612051345116_Tags.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612111720195_Properties.cs" />
+    <Compile Include="Migrations\201612111720195_Properties.Designer.cs">
+      <DependentUpon>201612111720195_Properties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Do\Category.cs" />
@@ -246,6 +250,7 @@
     <Compile Include="Models\Do\Transaction.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TransactionRequestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Startup.cs" />
@@ -369,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612051345116_Tags.resx">
       <DependentUpon>201612051345116_Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612111720195_Properties.resx">
+      <DependentUpon>201612111720195_Properties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
