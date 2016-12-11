@@ -73,18 +73,23 @@ namespace Pfm.ApiControllers
         }
 
         // POST: api/Transactions
-        [ResponseType(typeof(Transaction))]
-        public async Task<IHttpActionResult> PostTransaction(Transaction transaction)
+        [ResponseType(typeof(List<Transaction>))]
+        public async Task<IHttpActionResult> PostTransaction(TransactionRequestModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
+            if (model.Transactions.Any())
+            {
+                foreach (var transaction in model.Transactions)
+                {
+                    db.Transactions.Add(transaction);
+                }
+                await db.SaveChangesAsync();
+            }
 
-            db.Transactions.Add(transaction);
-            await db.SaveChangesAsync();
-
-            return CreatedAtRoute("DefaultApi", new { id = transaction.Id }, transaction);
+            return Ok(model.Transactions);
         }
 
         // DELETE: api/Transactions/5
